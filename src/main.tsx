@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './routes/Login.tsx';
 import SingUp from './routes/SingUp.tsx';
 import DashBoard from './routes/DashBorad.tsx';
+import ProtectedRoute from './routes/ProtectedRoute.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,17 @@ const router = createBrowserRouter([
     element: <SingUp/>,
   },
   {
-    path:"/DashBoard",
-    element: <DashBoard/>,
+    //cuando busca dasboard primero redirige a login y luego renderiza la validacion del ProtectedRoute
+    path:"/",
+    element: <ProtectedRoute/>,
+    
+    //children pide rutas hijas de la ruta principal
+    children:[
+      {
+        path: "/DashBoard",
+        element:<DashBoard/>
+      },
+    ]
   },
 ]);
 
