@@ -24,13 +24,13 @@ const AuthProvider = ({children}: AuthProviderProps) => {
   
 }
 
-export const useAuth = () =>{
-    useContext(AuthContext)
-}
 
 export default AuthProvider;
 
 
+export const useAuth = () =>{
+    useContext(AuthContext)
+}
 
 
 

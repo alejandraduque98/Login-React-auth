@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>hola mundo login y git con bracnches correcion</h1>
+      <h1>hola mundo login y git con bracnches repaso</h1>
     </>
   )
 }
